@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "Managed Browser History",
+  "version": "0.0.0.2",
+  "description": "Additional manually-managed browser history.",
+  "icons": {
+    "16": "images/History-Folder-Willow-icon_16.png",
+    "48": "images/History-Folder-Willow-icon_48.png",
+    "128": "images/History-Folder-Willow-icon_128.png"
+  },
+  "author": "Abbas Gussenov",
+  "short_name": "ManagedBrowserHistory",
+  "page_action": {
+    "default_icon": {
+      "16": "images/History-Folder-Graphite-icon_16.png",
+      "32": "images/History-Folder-Graphite-icon_32.png",
+      "48": "images/History-Folder-Graphite-icon_48.png"
+    },
+    "default_title": "Historize this page"
+  },
+  "background": {
+    "page": "background.html"
+  },
+  "permissions": [
+    "tabs",
+    "contextMenus"
+  ]
+}

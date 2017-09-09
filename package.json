@@ -1,0 +1,12 @@
+{
+  "description": "Additional manually-managed browser history.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gusenov/managed-browser-history.git"
+  },
+  "homepage": "https://github.com/gusenov/managed-browser-history#readme",
+  "license": "MIT",
+  "dependencies": {
+    "web-store": "0.0.1"
+  }
+}
