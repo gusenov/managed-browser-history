@@ -3,9 +3,9 @@
 - Клик на иконке расширения ЛКМ - запомнить страницу.
 - Клик на иконке расширения ПКМ → **Show Saved History...** - показать сохраненные закладки.
 
-<kbd>![Historize this page](historize-this-page.png)</kbd>
+<kbd>![Historize this page](screenshots/historize-this-page.png)</kbd>
 
-<kbd>![Show Saved History...](show-saved-history.png)</kbd>
+<kbd>![Show Saved History...](screenshots/show-saved-history.png)</kbd>
 
 # Структура проекта
 
