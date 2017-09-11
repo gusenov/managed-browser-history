@@ -15,9 +15,13 @@ zip --quiet -r $release \
                 "images/History-Folder-Willow-icon_16.png" \
                 "images/History-Folder-Willow-icon_48.png" \
                 "images/History-Folder-Willow-icon_128.png" \
+                "images/History-Folder-Sakura-icon_16.png" \
+                "images/History-Folder-Sakura-icon_32.png" \
+                "images/History-Folder-Sakura-icon_48.png" \
                 "images/History-Folder-Graphite-icon_16.png" \
                 "images/History-Folder-Graphite-icon_32.png" \
                 "images/History-Folder-Graphite-icon_48.png" \
+                "images/History-Folder-Willow-icon_128.png"\
                 "index.html" \
                 "index.js" \
                 "background.html" \

@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Managed Browser History",
-  "version": "0.0.0.2",
+  "version": "0.0.0.3",
   "description": "Additional manually-managed browser history.",
   "icons": {
     "16": "images/History-Folder-Willow-icon_16.png",
