@@ -3,14 +3,10 @@
 (function () {
     'use strict';
     
-    chrome.contextMenus.removeAll();
-    chrome.contextMenus.create({
-        title: "Show Saved History...",
-        contexts: ["page_action"],
-        onclick: function () {
-            chrome.tabs.create({ url: '/index.html' });
-        }
-    });
+    // https://stackoverflow.com/a/9310752/2289640
+    function escapeRegExp(text) {
+        return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
+    }
     
     function historyChangedCallback() {
         // Do nothing.
@@ -19,14 +15,50 @@
     var historyStorage = new WebStore(localStorage, 'link', historyChangedCallback),
         lastTabId = 0;
 
+    chrome.contextMenus.removeAll();
+    
+    chrome.contextMenus.create({
+        title: "Show Saved History...",
+        contexts: ["page_action"],
+        onclick: function () {
+            chrome.tabs.create({ url: '/index.html' });
+        }
+    });
+    
+    function disableIcon(tabId) {
+        chrome.pageAction.setIcon({ path: "images/History-Folder-Graphite-icon_16.png", tabId: tabId });
+    }
+    
+    function enableIcon(tabId) {
+        chrome.pageAction.setIcon({ path: "images/History-Folder-Sakura-icon_16.png", tabId: tabId });
+    }
+    
+    function deleteSelectedPageFromHistory() {
+        chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+            var recIdx = historyStorage.find("url", escapeRegExp(tabs[0].url));
+            if (recIdx !== -1) {
+                historyStorage.deleteRecordByIndex(recIdx);
+                disableIcon(tabs[0].id);
+            }
+        });
+    }
+    
+    chrome.contextMenus.create({
+        title: "Delete this Page from History",
+        contexts: ["page_action"],
+        onclick: function () {
+            deleteSelectedPageFromHistory();
+        }
+    });
+
     function showToolbarButton(tab) {
         if (tab) {
             lastTabId = tab.id;
             chrome.pageAction.show(lastTabId);
-            if (historyStorage.find("url", tab.url) !== -1) {
-                chrome.pageAction.setIcon({ path: "images/History-Folder-Sakura-icon_16.png", tabId: tab.id });
+            if (historyStorage.find("url", escapeRegExp(tab.url)) !== -1) {
+                enableIcon(tab.id);
             } else {
-                chrome.pageAction.setIcon({ path: "images/History-Folder-Graphite-icon_16.png", tabId: tab.id });
+                disableIcon(tab.id);
             }
         }
     }
@@ -57,7 +89,7 @@
             page,
             pageIdx;
         
-        pageIdx = historyStorage.find("url", tab.url);
+        pageIdx = historyStorage.find("url", escapeRegExp(tab.url));
         if (pageIdx !== -1) {
             // chrome.extension.getBackgroundPage().console.log('Exists.');
             page = historyStorage.getRecordByIndex(pageIdx);
@@ -72,7 +104,7 @@
                 cdate: nowDate,
                 udate: nowDate
             });
-            chrome.pageAction.setIcon({ path: "images/History-Folder-Sakura-icon_16.png", tabId: tab.id });
+            enableIcon(tab.id);
         }
     });
     

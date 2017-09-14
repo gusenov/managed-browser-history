@@ -42,7 +42,7 @@ $ npm install
 $ ./build.sh
 ```
 
-Результирующий файл: *ManagedBrowserHistory.zip*
+Результирующий файл: *ManagedBrowserHistory-#.#.#.#.zip*
 
 # Ссылки
 
