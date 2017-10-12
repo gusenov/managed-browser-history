@@ -8,6 +8,10 @@
         return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
     }
     
+    function makeQuery(text) {
+        return '^' + escapeRegExp(text) + '$';
+    }
+    
     function historyChangedCallback() {
         // Do nothing.
     }
@@ -35,7 +39,7 @@
     
     function deleteSelectedPageFromHistory() {
         chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-            var recIdx = historyStorage.find("url", escapeRegExp(tabs[0].url));
+            var recIdx = historyStorage.find("url", makeQuery(tabs[0].url));
             if (recIdx !== -1) {
                 historyStorage.deleteRecordByIndex(recIdx);
                 disableIcon(tabs[0].id);
@@ -55,7 +59,7 @@
         if (tab) {
             lastTabId = tab.id;
             chrome.pageAction.show(lastTabId);
-            if (historyStorage.find("url", escapeRegExp(tab.url)) !== -1) {
+            if (historyStorage.find("url", makeQuery(tab.url)) !== -1) {
                 enableIcon(tab.id);
             } else {
                 disableIcon(tab.id);
@@ -89,7 +93,7 @@
             page,
             pageIdx;
         
-        pageIdx = historyStorage.find("url", escapeRegExp(tab.url));
+        pageIdx = historyStorage.find("url", makeQuery(tab.url));
         if (pageIdx !== -1) {
             // chrome.extension.getBackgroundPage().console.log('Exists.');
             page = historyStorage.getRecordByIndex(pageIdx);

@@ -7,6 +7,6 @@
   "homepage": "https://github.com/gusenov/managed-browser-history#readme",
   "license": "MIT",
   "dependencies": {
-    "web-store": "0.0.3"
+    "web-store": "0.0.4"
   }
 }
