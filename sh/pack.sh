@@ -1,6 +1,7 @@
 version=$(jq --raw-output '.version' manifest.json)
 newVersion=$("./sh/increment_version.sh" $version)
 jq ".version = \"$newVersion\"" manifest.json | sponge manifest.json
+jq ".version_name = \"$newVersion beta\"" manifest.json | sponge manifest.json
 
 release="./pack-ext/BookmarkManager-$newVersion.zip"
 

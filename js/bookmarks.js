@@ -19,6 +19,13 @@ function link(title, url) {
 	return div;
 }
 
+function clipText(text) {
+	var div = document.createElement("div");
+	div.classList.add("cut-text");
+	div.appendChild(document.createTextNode(text));
+	return div;
+}
+
 function createRow(bookmark) {
 	var tr, div, a;
 	tr = document.createElement("tr");
@@ -29,10 +36,10 @@ function createRow(bookmark) {
 	div = document.createElement("div");
 	div.appendChild(link(getTitle(bookmark.info), bookmark.url));
 	var tags = getTags(bookmark.info);
-	if (!isBlank(tags)) { div.appendChild(document.createTextNode("tags: " + tags)); }
+	if (!isBlank(tags)) { div.appendChild( clipText("tags: " + tags) ); }
 	br(div);
 	var comment = getComment(bookmark.info);
-	if (!isBlank(comment)) { div.appendChild(document.createTextNode("comment: " + comment)); }
+	if (!isBlank(comment)) { div.appendChild( clipText("comment: " + comment) ); }
 	td(tr).appendChild(div);
 	
 	td(tr).appendChild(document.createTextNode(isBookmarked(bookmark.info) ? "\u2705" : "" ));
