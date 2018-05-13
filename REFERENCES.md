@@ -1,0 +1,3 @@
+- [Существует ли плагин для Chrome, показывающий, что я уже был на этой странице... - Toster.ru](https://toster.ru/answer?answer_id=1103988#answers_list_answer)
+- [bash - How to increment version number in a shell script? - Stack Overflow](https://stackoverflow.com/a/17364637/2289640)
+- [bash - Modify a key-value in a json using jq - Stack Overflow](https://stackoverflow.com/a/42717073/2289640)

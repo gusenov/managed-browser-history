@@ -1,28 +1,43 @@
 {
   "manifest_version": 2,
-  "name": "Managed Browser History",
-  "version": "0.0.0.6",
-  "description": "Additional manually-managed browser history.",
+  "name": "__MSG_extName__",
+  "version": "0.0.0.7",
+  "default_locale": "en",
+  "description": "__MSG_extDescription__",
   "icons": {
-    "16": "images/History-Folder-Willow-icon_16.png",
-    "48": "images/History-Folder-Willow-icon_48.png",
-    "128": "images/History-Folder-Willow-icon_128.png"
+    "16": "images/icons/icons.iconarchive.com/icons/custom-icon-design/flatastic-2/16/star-full-icon.png",
+    "48": "images/icons/icons.iconarchive.com/icons/custom-icon-design/flatastic-2/48/star-full-icon.png",
+    "128": "images/icons/icons.iconarchive.com/icons/custom-icon-design/flatastic-2/128/star-full-icon.png"
   },
-  "author": "Abbas Gussenov",
-  "short_name": "ManagedBrowserHistory",
   "page_action": {
     "default_icon": {
-      "16": "images/History-Folder-Graphite-icon_16.png",
-      "32": "images/History-Folder-Graphite-icon_32.png",
-      "48": "images/History-Folder-Graphite-icon_48.png"
+      "16": "images/icons/icons.iconarchive.com/icons/custom-icon-design/flatastic-2/16/star-full-icon.png",
+      "48": "images/icons/icons.iconarchive.com/icons/custom-icon-design/flatastic-2/48/star-full-icon.png",
+      "128": "images/icons/icons.iconarchive.com/icons/custom-icon-design/flatastic-2/128/star-full-icon.png"
     },
-    "default_title": "Historize this page"
+    "default_title": "__MSG_extPageActionDefaultTitle__",
+    "default_popup": "html/popup.html"
   },
+  "author": "__MSG_extAuthor__",
   "background": {
-    "page": "background.html"
+    "scripts": [
+      "node_modules/web-store/web-store.js",
+      "js/shared.js",
+      "js/background.js"
+    ],
+    "persistent": false
+  },
+  "externally_connectable": {
+    "ids": [
+      "oilbhdaboflggkedbegfpjmnikpiccmo",
+      "pkpobljamjgbapmbakcnhggopcmjhiio"
+    ]
   },
   "permissions": [
+    "contextMenus",
     "tabs",
-    "contextMenus"
-  ]
+    "storage"
+  ],
+  "short_name": "__MSG_extShortName__",
+  "version_name": "0.0.0.7 beta"
 }

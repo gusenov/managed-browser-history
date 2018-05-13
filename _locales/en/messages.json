@@ -1,0 +1,155 @@
+{
+	"extName": {
+		"message": "Bookmark Manager"
+	},
+	
+	"extDescription": {
+		"message": "Simple and Easy to Use"
+	},
+	
+	"extPageActionDefaultTitle": {
+		"message": "Add Bookmark..."
+	},
+	
+	"extAuthor": {
+		"message": "Abbas Gussenov"
+	},
+	
+	"extShortName": {
+		"message": "Bookmarks"
+	},
+
+
+
+
+	"bDeleteEntry": {
+		"message": "⛔ Delete Entry"
+	},
+
+	"confirmDeleteEntry": {
+		"message": "Do you really want to delete this entry?"
+	},
+
+
+
+
+	"lImpression": {
+		"message": "Impression:"
+	},
+	
+	"oImpressionNone": {
+		"message": "None"
+	},
+
+	"oImpressionDislike": {
+		"message": "👎 Dislike"
+	},
+	
+	"oImpressionLike": {
+		"message": "👍 Like"
+	},
+	
+	"oImpressionSoppy": {
+		"message": "💧 Soppy"
+	},
+	
+	"oImpressionFluffy": {
+		"message": "🐼 Fluffy"
+	},
+	
+	"oImpressionBorrrriiinnng": {
+		"message": "💤 Borrrriiinnng!"
+	},
+	
+	"oImpressionLOLZ": {
+		"message": "😄 LOLZ"
+	},
+	
+	"oImpressionUnputdownable": {
+		"message": "🚀 Unputdownable"
+	},
+	
+	"oImpressionBeachBag": {
+		"message": "🌴 Beach Bag"
+	},
+	
+	"oImpressionLovedUp": {
+		"message": "💞 Loved Up"
+	},
+	
+	"oImpressionWorthwhile": {
+		"message": "🎯 Worthwhile"
+	},
+	
+	"oImpressionLearntALot": {
+		"message": "💡 Learnt A Lot"
+	},
+	
+	"oImpressionHiddenDepths": {
+		"message": "🔮 Hidden Depths"
+	},
+	
+	"oImpressionLostOnMe": {
+		"message": "🙈 Lost On Me"
+	},
+	
+	"oImpressionSpooky": {
+		"message": "💀 Spooky"
+	},
+	
+	"oImpressionUtterCrap": {
+		"message": "💩 Utter Crap"
+	},
+
+
+
+
+	"lState": {
+		"message": "State:"
+	},
+	
+	"oStateNone": {
+		"message": "None"
+	},
+		
+	"oStateToRead": {
+		"message": "📗 To read"
+	},
+	
+	"oStateCurrentlyReading": {
+		"message": "📒 Currently reading"
+	},
+	
+	"oStateAlreadyRead": {
+		"message": "📙 Already read"
+	},
+
+
+
+
+	"lBookmark": {
+		"message": "Bookmark this page"
+	},
+
+
+
+
+	"bClosePopup": {
+		"message": "Save & Close 🚪"
+	},
+
+
+
+
+	"lTags": {
+		"message": "Tags:"
+	},
+
+
+
+
+	"lComment": {
+		"message": "Comment:"
+	}
+}
+

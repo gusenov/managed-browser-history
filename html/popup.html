@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<link href="/css/popup.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="grid-container">
+			<div class="grid-item delete">
+				<button id="bDeleteEntry"></button>
+			</div>
+			<div class="grid-item impression">
+				<label for="sImpression" id="lImpression"></label>
+				<br>
+				<select id="sImpression">
+					<option value="oImpressionNone"  id="oImpressionNone"></option>
+					<option value="oImpressionDislike"  id="oImpressionDislike"></option>
+					<option value="oImpressionLike"  id="oImpressionLike"></option>
+					<option value="oImpressionSoppy" id="oImpressionSoppy"></option>
+					<option value="oImpressionFluffy" id="oImpressionFluffy"></option>
+					<option value="oImpressionBorrrriiinnng" id="oImpressionBorrrriiinnng"></option>
+					<option value="oImpressionLOLZ" id="oImpressionLOLZ"></option>
+					<option value="oImpressionUnputdownable" id="oImpressionUnputdownable"></option>
+					<option value="oImpressionBeachBag" id="oImpressionBeachBag"></option>
+					<option value="oImpressionLovedUp" id="oImpressionLovedUp"></option>
+					<option value="oImpressionWorthwhile" id="oImpressionWorthwhile"></option>
+					<option value="oImpressionLearntALot" id="oImpressionLearntALot"></option>
+					<option value="oImpressionHiddenDepths" id="oImpressionHiddenDepths"></option>
+					<option value="oImpressionLostOnMe" id="oImpressionLostOnMe"></option>
+					<option value="oImpressionSpooky" id="oImpressionSpooky"></option>
+					<option value="oImpressionUtterCrap" id="oImpressionUtterCrap"></option>
+				</select>
+			</div>
+			<div class="grid-item state">
+				<label for="sState" id="lState"></label>
+				<br>
+				<select id="sState">
+					<option value="oStateNone" id="oStateNone"></option>
+					<option value="oStateToRead" id="oStateToRead"></option>
+					<option value="oStateCurrentlyReading" id="oStateCurrentlyReading"></option>
+					<option value="oStateAlreadyRead" id="oStateAlreadyRead"></option>
+				</select>
+			</div>
+			<div class="grid-item bookmark">
+				<input type="checkbox" id="cbBookmark">
+				<label for="cbBookmark" id="lBookmark"></label>
+			</div>
+			<div class="grid-item close">
+				<button id="bClosePopup"></button>
+			</div>
+			<div class="grid-item tags">
+				<label for="taTags" id="lTags"></label>
+				<textarea id="taTags" rows="2"></textarea>
+			</div>
+			<div class="grid-item comment">
+				<label for="taComment" id="lComment"></label>
+				<textarea id="taComment" rows="29"></textarea>
+			</div>
+		</div>
+		<script src="/js/shared.js"></script>
+		<script src="/js/popup.js"></script>
+	</body>
+</html>
+
